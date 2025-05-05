@@ -20,5 +20,9 @@
         "titleBar.border": "#215732",
         "titleBar.inactiveBackground": "#21573299"
     },
-    "peacock.color": "#215732"
+    "peacock.color": "#215732",
+    "editor.formatOnSave": true,
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }
