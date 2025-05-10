@@ -10,33 +10,32 @@ This function will create and insert/append the elements needed to display a "pa
 */
 
 // function showPage
-// - paramètres : studentList (tableau), page (numéro de page demandé)
+// - Parameters: studentList (array), page (requested page number)
 function showPage(list, page) {
-  // 1. Calculer le startIndex et endIndex pour les étudiants à afficher
+  // 1. Calculate startIndex and endIndex to determine which students to display
   //    startIndex = (page * itemsPerPage) - itemsPerPage
   //    endIndex = page * itemsPerPage
   let startIndex = page * studentsPerPage - studentsPerPage;
   let endIndex = page * studentsPerPage;
 
-  // 2. Sélectionner la balise <ul class="student-list"> et la vider avec innerHTML = ""
+  // 2. Select the <ul class="student-list"> element and clear its content using innerHTML = ""
   studentListContainer.innerHTML = "";
 
-  // 3. Boucler sur le tableau studentList
+  // 3. For each student at index i:
   for (let i = 0; i < studentList.length; i++) {
-    //    Pour chaque étudiant à l’index i :
-    //    - Si i >= startIndex && i < endIndex
-    //      - Créer un bloc HTML (template literal) avec l'info de l’étudiant
-    //      - Injecter ce HTML dans la <ul> avec insertAdjacentHTML("beforeend", ...)
+    //    - If i >= startIndex && i < endIndex:
+    //      - Create an HTML block (template literal) with the student's info
+    //      - Insert the HTML into the <ul> using insertAdjacentHTML("beforeend", ...)
     if (i >= startIndex && i < endIndex) {
       const studentListItem = `
        <li class="student-item cf">
           <div class="student-details">
-            <img class="avatar" src="${studentList[i].picture.thumbnail}" alt="Profile Picture">
+            <img class="avatar" src="${studentList[i].picture.large}" alt="Profile Picture">
             <h3>${studentList[i].name.first} ${studentList[i].name.last}</h3>
             <span class="email">${studentList[i].email}</span>
           </div>
           <div class="joined-details">
-            <span class="date">${studentList[i].registered.date}</span>
+            <span class="date">Joinded since: ${studentList[i].registered.date}</span>
           </div>
         </li>
     `;
@@ -44,7 +43,7 @@ function showPage(list, page) {
     }
   }
 }
-// Fin de la fonction
+// End of showPage function
 
 /*
 Create the `addPagination` function
