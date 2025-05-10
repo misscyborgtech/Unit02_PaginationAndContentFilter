@@ -70,3 +70,7 @@ This project displays a list of student profiles with pagination and filtering f
 IN COMING
 
 ---
+
+## 🚀 Next Steps
+
+TO BE DETERMINED
