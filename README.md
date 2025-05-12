@@ -32,7 +32,7 @@ This project displays a list of student profiles with pagination and filtering f
 
 > These additions go beyond the minimum requirements and aim for an "Exceeds Expectations" rating.
 
-### 🔍 Search Bar (Bonus Feature — Not yet implemented in progress)
+### 🔍 Search Bar (Bonus Feature)
 
 - A search input and button dynamically inserted into the DOM.
 - Filters the list of students by name in real-time using the `keyup` event.
@@ -67,7 +67,7 @@ This project displays a list of student profiles with pagination and filtering f
 
 ## 🌐 Deployment
 
-IN COMING
+https://misscyborgtech.github.io/Unit02_PaginationAndContentFilter/
 
 ---
 
